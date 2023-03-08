@@ -42,7 +42,7 @@ function App() {
     <div>
       {selectedCountry ? (
         <div>
-          <h2>{selectedCountry.name.common}</h2>
+          <h2 class="bg-[#22d3ee] text-tahiti">{selectedCountry.name.common}</h2>
           {selectedCountry.flags && (
             <img src={selectedCountry.flags.png} alt={`${selectedCountry.name.common} flag`} />
           )}
@@ -50,7 +50,7 @@ function App() {
             <p>Idiomas: {Object.values(selectedCountry.languages).join(", ")}</p>
           )}
           {selectedCountry.capital && <p>Capital: {selectedCountry.capital}</p>}
-          {selectedCountry.population && <p>Población: {selectedCountry.population}</p>}
+          {selectedCountry.population && <p>Población: {selectedCountry.population} millones</p>}
           <button onClick={handleBackButtonClick}>Volver a la lista de países</button>
         </div>
       ) : (
