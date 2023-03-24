@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Clima from "./components/clima";
+//import cx from "classnames";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,7 +43,7 @@ function App() {
     <div>
       {selectedCountry ? (
         <div>
-          <h2 class="bg-[#22d3ee] text-tahiti">{selectedCountry.name.common}</h2>
+          <h2 >{selectedCountry.name.common}</h2>
           {selectedCountry.flags && (
             <img src={selectedCountry.flags.png} alt={`${selectedCountry.name.common} flag`} />
           )}
